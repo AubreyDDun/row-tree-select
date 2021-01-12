@@ -1,0 +1,50 @@
+.mixin-text-overflow {
+  word-wrap: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mixin-flexRow(@justifyContent: center, @alignItems: center) {
+  display: flex;
+  flex-direction: row;
+  align-items: @alignItems;
+  justify-content: @justifyContent;
+}
+
+.mixin-flexColumn(@justifyContent: center, @alignItems: center) {
+  display: flex;
+  flex-direction: column;
+  align-items: @alignItems;
+  justify-content: @justifyContent;
+}
+
+.mixin-notFlexible {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.mixin-flexible {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.mixin-onlyShrinkable {
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+
+.mixin-onlyGrowable {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.mixin-filterHack {
+  will-change: transform;
+}
+
+.mixin-fakeATag {
+  display: block;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}

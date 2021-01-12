@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "jsxFactory": "VueTsxSupport",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "typeRoots": [
+      "/@types",
+      "./node_modules/@types"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+  },
+  "includes": [
+    "src/shims-other.d.ts",
+    "src/shims-vue.d.ts"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "node_modules/vue-tsx-support/enable-check.d.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

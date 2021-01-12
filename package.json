@@ -1,0 +1,108 @@
+{
+  "name": "row-tree-select",
+  "version": "0.0.3",
+  "description": "RowTreeSelect is similar to the common TreeSelect in the community, except that the nodes are arranged in a row.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "private": false,
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "analyz": "npm_config_report=true npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "@vue/cli-plugin-babel": "~4.3.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "ant-design-vue": "^1.7.1",
+    "antd-dayjs-webpack-plugin": "^1.0.1",
+    "babel-plugin-import": "^1.13.0",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.0",
+    "dayjs": "^1.9.6",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.2.5",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^9.5.0",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.11",
+    "typescript": "^4.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "vue": "^2.6.12",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^9.0.2",
+    "vue-template-compiler": "^2.6.12",
+    "vue-tsx-support": "^3.0.3",
+    "webpack": "^4.0.0",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^4.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "cross-env-shell commitlint -e $GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "core/**/*.{js,jsx,vue,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "vue",
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "@vue/typescript"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-unused-vars": "off",
+      "class-methods-use-this": "off",
+      "consistent-return": "off",
+      "no-underscore-dangle": "off",
+      "linebreak-style": "off",
+      "no-param-reassign": [
+        "error",
+        {
+          "props": false
+        }
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AubreyDDun/row-tree-select.git"
+  },
+  "keywords": [
+    "treeSelect",
+    "tree",
+    "typescript",
+    "vue"
+  ],
+  "author": "AubreyDDun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AubreyDDun/row-tree-select/issues"
+  },
+  "homepage": "https://github.com/AubreyDDun/row-tree-select#readme"
+}
